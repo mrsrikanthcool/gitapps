@@ -15,6 +15,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build & Push Image
       run: |
-        docker login -u "mrsrikanthcool" --password-stdin
+        winpty docker login -u "mrsrikanthcool" --password-stdin
         docker image build -t mrsrikanthcool/gitops:sri-gitops .
         docker push mrsrikanthcool/gitops:tagname:sri-gitops
