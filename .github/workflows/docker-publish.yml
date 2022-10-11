@@ -13,8 +13,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Build & Push Image
+    - name: Build & Push Docker image
+      
+     
       run: |
-        docker login -u "mrsrikanthcool" -p $DOCKER_PASSWORD
+        docker login:
+         with:
+           username: ${{ secrets.DOCKER_USERNAME }}
+           password: ${{ secrets.DOCKER_PASSWORD }}
+      
         docker image build -t mrsrikanthcool/gitops:sri-gitapps .
         docker push mrsrikanthcool/gitops:tagname:sri-gitapps
