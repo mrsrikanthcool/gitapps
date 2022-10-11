@@ -16,5 +16,5 @@ jobs:
     - name: Build & Push Image
       run: |
         docker login -u "mrsrikanthcool" --password-stdin
-        docker image build -t mrsrikanthcool/gitops:sri-gitops .
-        docker push mrsrikanthcool/gitops:tagname:sri-gitops
+        docker image build -t mrsrikanthcool/gitops:sri-gitapps .
+        docker push mrsrikanthcool/gitops:tagname:sri-gitapps
