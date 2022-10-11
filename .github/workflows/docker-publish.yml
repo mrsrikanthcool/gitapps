@@ -17,7 +17,7 @@ jobs:
       
      
       run: |
-        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+        docker login -u ${{ env.DOCKER_USERNAME }} -p ${{ env.DOCKER_PASSWORD }}
       
         docker image build -t mrsrikanthcool/gitops:sri-gitapps .
         docker push mrsrikanthcool/gitops:tagname:sri-gitapps
