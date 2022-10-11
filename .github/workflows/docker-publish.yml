@@ -16,5 +16,5 @@ jobs:
     - name: Build & Push Image
       run: |
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-        docker image build -t docker push mrsrikanthcool/gitops:gitactions .
-        docker push docker push mrsrikanthcool/gitops:gitactions
+        docker image build -t mrsrikanthcool/gitops:gitactions .
+        docker push mrsrikanthcool/gitops:gitactions
