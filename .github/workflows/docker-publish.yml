@@ -25,7 +25,6 @@ jobs:
        
       
         docker image build -t mrsrikanthcool/gitops:sri-gitapps .
-        docker login -u "mrsrikanthcool" -p-stdin
         docker push mrsrikanthcool/gitops:tagname:sri-gitapps
         
        
