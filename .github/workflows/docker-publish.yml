@@ -15,6 +15,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build & Push Image
       run: |
-        docker login -u "mrsrikanthcool" --password-stdin
+        docker login -u "mrsrikanthcool" -p $DOCKER_PASSWORD
         docker image build -t mrsrikanthcool/gitops:sri-gitapps .
         docker push mrsrikanthcool/gitops:tagname:sri-gitapps
